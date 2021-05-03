@@ -1,64 +1,68 @@
 {
-  "name": "Luna Bot",
-  "description": "Telegram's luna Bot. Create your Fork now.",
-  "name": "Telegram Torrent Leecher",
-  "description": "A Telegram Torrent (and youtube-dl) Leecher based on Pyrogram. Powered by @ThankTelegram!",
-  "keywords": [
-    "lunna",
-    "telegram",
-    "best",
-    "indian",
-    "pyrogram",
-    "torrent",
-    "3",
-    "plugin",
-    "modular",
-    "productivity",
-    "youtube-dl",
-    "leecher"
-  ],
-  "success_url": "https://telegram.dog/",
-  "website": "https://github.com/",
-  "repository": "https://github.com/",
-"env": {
-    "bot_token": {
-      "description": "Your bot token, as a string.",
-      "value": ""
+      "name": "Luna",
+      "description": "An Anime themed Telegram group management bot.",
+      "keywords": [
+         "telegram",
+         "anime",
+         "group",
+         "manager",
+         "Hexzy"
+      ],   
+   "repository": "https://github.com/only-music/LunaChatBot",
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     },
-    "APP_ID": {
-      "description": "Get this value from https://my.telegram.org",
-      "value": ""
-    },
-    
-"api_hash": {
-    
-      "description": "Get this value from https://my.telegram.org",
-      "value": ""
-    },
-    "owner_id": {
-      "description": "1xxxxxxxx9",
-    "TG_BOT_TOKEN": {
-      "description": "get this value from @BotFather",
-      "value": ""
-    },
-    "bot_id": {
-      "description": "18xxxxxx5",
-  },
-  "addons": [
-  ],
-  "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
-    "url": "https://github.com/SayanthD/aria2-heroku"
-  }, {
-    "url": "https://github.com/amivin/rclone-heroku"
-  }, {
-    "url": "heroku/python"
-  }],
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  }
+    {
+      "url": "heroku/python"
+    }     
+  ],      
+   "env": {
+      "bot_token": {
+         "description": "Your bot token. Get one from @BotFather duh",
+         "required": true,
+         "value": ""
+      },
+      "api_id": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },
+      "api_hash": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },    
+      "SQLALCHEMY_DATABASE_URI": {
+         "description": "Your postgres sql db, empty this field if you dont have one.",
+         "required": false,
+         "value": "sqldbtype://username:pw@hostname:port/db_name"
+      },      
+      "owner_id": {
+         "description": "Your user ID as an integer.",
+         "required": true,
+         "value": "1469528232"
+      },
+      "bot_id": {
+         "description": "Your bot id",
+         "value": "Prabha_sha"      
+      }
+   },
+   "keywords": [
+      "telegram",
+      "anime",
+      "group",
+      "manager",
+      "Hexzy"
+   ],
+   "name": "Luna",
+   "repository": "https://github.com/only-music/LunaChatBot"
 }
