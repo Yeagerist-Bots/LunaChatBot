@@ -6,9 +6,9 @@ from Python_ARQ import ARQ
 
 luna = Client(
     ":memory:",
-    bot_token=1582636407:AAGuKzkSdzblLiJKqfPbJ9tFeGQKPi7h_PM,
-    api_id=2443183,
-    api_hash="66b6799e1b784aff78bad680cd8362db",
+    bot_token=1641954476:AAG-EBjPfq8mj7OI6odusgtAa13j9xCQyOo,
+    api_id=3938951,
+    api_hash="6561686ba611b2d46efedef7debd6fa5",
 )
 
 arq = ARQ(ARQ_API)
@@ -26,8 +26,8 @@ async def getresp(query):
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[Github](https://github.com/thehamkercat/LunaChatBot)"
-        + " | [Group](t.me/PatheticProgrammers)", disable_web_page_preview=True)
+        "[Github](https://github.com/Yeagerist-Bots/LunaChatBot)"
+        + " | [Group](https://t.me/Yeageristbots)", disable_web_page_preview=True)
 
 
 @luna.on_message(filters.command("help") & ~filters.edited)
