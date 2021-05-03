@@ -56,13 +56,13 @@
          "value": "Prabha_sha"      
       }
    },
-   "keywords": [
-      "telegram",
-      "anime",
-      "group",
-      "manager",
-      "Hexzy"
-   ],
-   "name": "Luna",
-   "repository": "https://github.com/only-music/LunaChatBot"
+   }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
